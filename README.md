@@ -59,10 +59,11 @@ java -jar target/fx-backtester-1.0-SNAPSHOT-jar-with-dependencies.jar import ./e
 ```
 
 CSV format:
+```
 ts,ccy_pair,spot
 2020-01-01T00:00:00Z,EURUSD,1.1205
 2020-01-01T00:01:00Z,EURUSD,1.1207
-
+```
 text
 
 ### Run backtest
