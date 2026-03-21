@@ -14,30 +14,7 @@ This tool ingests FX spot prices from CSV into a local embedded H2 database, sup
 - OpenCSV
 
 ## Project Structure
-fx-backtester/
-│
-├── pom.xml
-│
-└── src/main/java/com/quynh/fxapp/
-│
-├── App.java # CLI entry point
-│
-├── db/
-│ ├── DatabaseManager.java # JDBC connection & schema init
-│ └── FxPriceDao.java # Batch insert & time-windowed queries
-│
-├── model/
-│ └── FxPrice.java # FX spot price domain object
-│
-├── strategy/
-│ ├── Strategy.java # Strategy interface
-│ ├── MaCrossoverStrategy.java # MA crossover implementation
-│ └── BacktestResult.java # PnL, trades & drawdown container
-│
-└── service/
-├── ImportService.java # CSV ingest into H2
-└── BacktestEngine.java # Loads data & runs strategy
-
+(in separate file)
 
 ## Getting Started
 
