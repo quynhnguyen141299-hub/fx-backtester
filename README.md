@@ -94,9 +94,8 @@ text
 - [ ] Live data feed integration
 - [ ] Swap to Postgres/MySQL for production use
 
-## License
+## How to push to git
 
-MIT
 Save as README.md in C:\Users\urname\fx-backtester\, then push:
 
 text
