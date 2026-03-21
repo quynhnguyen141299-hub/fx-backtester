@@ -3,7 +3,9 @@
 A lightweight Java CLI application for backtesting FX spot trading strategies on historical price data.
 
 # Strategy used for backtesting for illustration: 
-When short-term trend (last 5 period-prices) > long-term trend (last 20-period prices), the price is likely rising — so buy. When it falls back below — sell.
+When short-term trend (last 5 period-prices) > long-term trend (last 20-period prices), 
+the price is likely rising — so buy. 
+When it falls back below — sell.
 
 # Details
 The strategy backtested was a Moving Average (MA) Crossover:
