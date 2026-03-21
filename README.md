@@ -34,7 +34,7 @@ This tool ingests FX spot prices from CSV into a local embedded H2 database, sup
 
 - Java 21
 - Maven
-- H2 (embedded database, JDBC)
+- H2 (embedded database, JDBC) : we use this bc H2 is lightweight, and supports local data stored on user's machine, (e.g. fxdb.mv.db in your project folder), not on a remote MySQL/Postgres server. So when your app runs DatabaseManager.getConnection(), it just opens that local file directly. No network, no setup, no passwords. When your app stops, the file stays — data persists between runs.
 - OpenCSV
 
 ## Project Structure
