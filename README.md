@@ -154,6 +154,7 @@ print("Created eurusd.csv")
 ```
 
 Other note:
+
 H2 is a small database engine written in Java that runs inside your app's process — no separate server to install or configure.
 
 1. Local — the database lives on your machine as a file (e.g. fxdb.mv.db), not on a remote server
