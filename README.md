@@ -4,7 +4,7 @@ A lightweight Java CLI application for backtesting FX spot trading strategies on
 
 ## Overview
 
-This tool ingests FX spot prices from CSV into a local embedded H2 database, supports time-windowed querying, and runs configurable moving average crossover backtests with PnL and drawdown reporting.
+This tool ingests FX spot prices from CSV into a local embedded H2 database, supports time-windowed querying, and runs configurable MA crossover backtests with PnL and drawdown reporting.
 
 ## Tech Stack
 
