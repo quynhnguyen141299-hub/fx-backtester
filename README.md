@@ -122,14 +122,15 @@ text
 ## How to push to git
 
 Save as README.md in C:\Users\urname\fx-backtester\, then push:
-
+```
 text
 git add README.md
 git commit -m "Add README"
 git push
+```
 ----------
 Note: sample eurusd.csv was generated using this Python snippet:
-
+```
 import csv
 from datetime import datetime, timedelta, timezone
 
@@ -148,3 +149,4 @@ with open("eurusd.csv", "w", newline="") as f:
     writer.writerows(rows)
 
 print("Created eurusd.csv")
+```
