@@ -36,7 +36,7 @@ This tool ingests FX spot prices from CSV into a local embedded H2 database, sup
 
 - Java 21
 - Maven
-- H2 (embedded database, JDBC) : we use this bc H2 is lightweight, and supports local data stored on user's machine, (e.g. fxdb.mv.db in your project folder), not on a remote MySQL/Postgres server. So when your app runs DatabaseManager.getConnection(), it just opens that local file directly. No network, no setup, no passwords. When your app stops, the file stays — data persists between runs.
+- H2 (embedded database, JDBC) 
 - OpenCSV
 
 ## Project Structure
@@ -152,3 +152,22 @@ with open("eurusd.csv", "w", newline="") as f:
 
 print("Created eurusd.csv")
 ```
+
+Other note:
+H2 is a small database engine written in Java that runs inside your app's process — no separate server to install or configure.
+
+1. Local — the database lives on your machine as a file (e.g. fxdb.mv.db), not on a remote server
+2. Embedded — it runs inside your Java app directly, no need to install or start a separate database service (unlike MySQL/Postgres where you run a server first)
+3. H2 — the name of the database engine; lightweight, fast, and designed for exactly this kind of use
+
+How it works in your project:
+1. When your app starts, H2 creates/opens a file called fxdb.mv.db in your project folder
+2. Your Java code talks to it via JDBC (standard Java database API) — same SQL as MySQL/Postgres
+3. When your app stops, the data persists in that file
+4. Next time you run the app, the data is still there
+
+Why use it:
+1. Zero setup — no installing MySQL, no creating users, no starting services
+2. Portable — the whole database is just a file you can copy or delete
+3. Swappable — since it uses standard JDBC/SQL, you can switch to Postgres or MySQL later by just changing the connection URL in DatabaseManager.java
+
