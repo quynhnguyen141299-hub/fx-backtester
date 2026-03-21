@@ -2,6 +2,30 @@
 
 A lightweight Java CLI application for backtesting FX spot trading strategies on historical price data.
 
+# Strategy used for backtesting for illustration: 
+When short-term trend (last 5 period-prices) > long-term trend (last 20-period prices), the price is likely rising — so buy. When it falls back below — sell.
+
+# Details
+The strategy backtested was a Moving Average (MA) Crossover:
+How it works
+We defined 2 moving averages: a fast MA (short window) and a slow MA (long window)
+When the fast MA crosses above the slow MA → buy (go long)
+When the fast MA crosses below the slow MA → exit (close position)
+
+# Our specific run
+text
+```
+backtest EURUSD 2020-01-01T00:00:00Z 2020-01-01T02:00:00Z 5 20
+```
+Fast MA = 5-period
+
+Slow MA = 20-period
+
+Pair = EURUSD
+
+Window = 2 hours of 1-minute data
+
+Result = 2 trades, PnL of 0.0160 (≈160 pips), no drawdown
 ## Overview
 
 This tool ingests FX spot prices from CSV into a local embedded H2 database, supports time-windowed querying, and runs configurable MA crossover backtests with PnL and drawdown reporting.
