@@ -15,6 +15,8 @@ The strategy backtested is a **Moving Average (MA) Crossover**:
 - Define two moving averages: a fast MA (short window) and a slow MA (long window)
 - When the fast MA crosses above the slow MA &rarr; **buy** (go long)
 - When the fast MA crosses below the slow MA &rarr; **exit** (close position)
+- PnL : 0.018 means the EURUSD spot price moved 0.018 in our favour across the 2 trades — that's 18 pips (not 180).
+ 
 
 ## Tech Stack
 
