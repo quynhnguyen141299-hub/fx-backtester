@@ -1,6 +1,5 @@
 # FX Backtester
 
-![FX Backtester](docs/screenshot.png)
 
 A lightweight Java CLI application for backtesting FX spot trading strategies on historical price data.
 
