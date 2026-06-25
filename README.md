@@ -94,16 +94,6 @@ java -jar target/fx-backtester-1.0-SNAPSHOT-jar-with-dependencies.jar backtest E
 # Strategy=MA(5,20), trades=2, PnL=0.0180, maxDD=0.0
 ```
 
-**Full month:**
-```bash
-java -jar target/fx-backtester-1.0-SNAPSHOT-jar-with-dependencies.jar backtest EURUSD 2020-01-01T00:00:00Z 2020-02-01T00:00:00Z 10 50
-```
-
-**Full year:**
-```bash
-java -jar target/fx-backtester-1.0-SNAPSHOT-jar-with-dependencies.jar backtest EURUSD 2020-01-01T00:00:00Z 2021-01-01T00:00:00Z 10 50
-```
-
 ## Architecture
 
 - **db/** &mdash; JDBC database manager and DAO for batch inserts and time-windowed queries
