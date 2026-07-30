@@ -109,11 +109,3 @@ H2 is an embedded database engine that runs inside the Java process &mdash; no s
 - **Portable** &mdash; the whole database is a single file you can copy or delete
 - **Swappable** &mdash; uses standard JDBC/SQL, so you can switch to Postgres or MySQL by changing the connection URL in `DatabaseManager.java`
 
-## Roadmap
-
-- [ ] Additional strategies (mean reversion, Bollinger Bands, RSI)
-- [ ] JavaFX GUI
-- [ ] Multi-pair and cross-pair support
-- [ ] Sharpe ratio, Sortino ratio, and additional risk metrics
-- [ ] Live data feed integration
-- [ ] Swap to Postgres/MySQL for production use
